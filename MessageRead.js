@@ -59,7 +59,10 @@
   function loadProps() {
       const item = Office.context.mailbox.item;
 
+
       console.log(item)
+      console.log(item.body);
+      console.log(item.body.getAsync());
 
     $('#dateTimeCreated').text(item.dateTimeCreated.toLocaleString());
     $('#dateTimeModified').text(item.dateTimeModified.toLocaleString());
