@@ -57,7 +57,9 @@
   // $$LOC(Load properties from the Item base object, then load the
   // message-specific properties.
   function loadProps() {
-    const item = Office.context.mailbox.item;
+      const item = Office.context.mailbox.item;
+
+      console.log(item)
 
     $('#dateTimeCreated').text(item.dateTimeCreated.toLocaleString());
     $('#dateTimeModified').text(item.dateTimeModified.toLocaleString());
