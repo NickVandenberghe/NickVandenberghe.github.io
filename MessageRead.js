@@ -59,7 +59,7 @@
   function loadProps() {
       const item = Office.context.mailbox.item;
 
-      item.body.getAsync(Office.CoercionType.Html, (bodyResult) => {
+      item.body.getAsync(Office.CoercionType.Text, (bodyResult) => {
           console.log(bodyResult);
           if (bodyResult.status === Office.AsyncResultStatus.Failed) {
               console.log(`Failed to get body: ${bodyResult.error.message}`);
